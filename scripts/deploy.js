@@ -3,12 +3,12 @@ const { ethers } = require("hardhat");
 const deploy = async () => {
   const [deployer] = await ethers.getSigners();
 
-  console.log("Deploying contract with the account: ", deployer.address);
+  console.log("Deploying contract with the account:", deployer.address);
 
-  const OmarPunks = await ethers.getContractFactory("OmarPunks");
-  const deployed = await OmarPunks.deploy();
+  const PlatziPunks = await ethers.getContractFactory("PlatziPunks");
+  const deployed = await PlatziPunks.deploy();
 
-  console.log("Omar Punks is deployed at: ", deployed.address);
+  console.log("Platzi Punks is deployed at:", deployed.address);
 };
 
 deploy()
